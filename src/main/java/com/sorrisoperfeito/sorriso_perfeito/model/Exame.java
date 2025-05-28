@@ -4,46 +4,18 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
+import lombok.Data;
 
 @Entity
+@Data
 public class Exame {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tipoExame;
-    private String observacoes;
+    @Lob
+    private String descricao;
 
-    public Exame() {
-    }
-
-    public Exame(String tipoExame, String observacoes) {
-        this.tipoExame = tipoExame;
-        this.observacoes = observacoes;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTipoExame() {
-        return tipoExame;
-    }
-
-    public void setTipoExame(String tipoExame) {
-        this.tipoExame = tipoExame;
-    }
-
-    public String getObservacoes() {
-        return observacoes;
-    }
-
-    public void setObservacoes(String observacoes) {
-        this.observacoes = observacoes;
-    }
+    private Double preco;
 }

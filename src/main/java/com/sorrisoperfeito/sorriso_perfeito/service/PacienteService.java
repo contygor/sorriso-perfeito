@@ -37,7 +37,7 @@ public class PacienteService {
             pacienteExistente.setOcupacao(pacienteAtualizado.getOcupacao());
             pacienteExistente.setTelefone(pacienteAtualizado.getTelefone());
             pacienteExistente.setEndereco(pacienteAtualizado.getEndereco());
-            pacienteExistente.setPlanoDeSaude(pacienteAtualizado.getPlanoDeSaude());
+            pacienteExistente.setPlanos(pacienteAtualizado.getPlanos());
             return pacienteRepository.save(pacienteExistente);
         });
     }
